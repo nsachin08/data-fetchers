@@ -5,14 +5,15 @@ from datetime import datetime
 import pytz 
 from websockets import connect 
 from termcolor import cprint 
+from common import symbols
+from common import websocket_url_base 
 
 '''
 Script to fetch live data from binance fstream , of diff symbols.
 '''
 
 # list of symbols you want to track 
-symbols = ['btcusdt', 'ethusdt', 'solusdt', 'wifusdt']
-websocket_url_base = 'wss://fstream.binance.com/ws/'
+
 trades_filename = 'binance_trades.csv'
 
 # check if the csv file exists

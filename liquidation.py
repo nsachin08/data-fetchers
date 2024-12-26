@@ -9,7 +9,7 @@ from termcolor import cprint
 websocket_url = 'wss://fstream.binance.com/ws/!forceOrder@arr'
 filename = 'binance.csv'
 
-async def binance_liquidation(uri, filename):
+async def binance_liquidation(uri):
     async with connect(uri) as websocket:
         while True:
             try:
@@ -54,4 +54,4 @@ async def binance_liquidation(uri, filename):
             except Exception as e:
                 await asyncio.sleep(5)
 
-asyncio.run(binance_liquidation(websocket_url, filename))
+asyncio.run(binance_liquidation(websocket_url))

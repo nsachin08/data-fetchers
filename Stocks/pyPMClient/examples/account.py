@@ -4,6 +4,11 @@ sys.path.append('../')
 from pmClient import PMClient
 
 pm = PMClient(api_key="api_key", api_secret="api_secret")
+''' 
+login pm
+pm.login('state_value')
+
+'''
 pm.generate_session("request_token")
 
 pm.set_access_token("your_access_token")
